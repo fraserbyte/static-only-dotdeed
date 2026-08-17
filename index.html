@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOT DEED — Premium Domain Certificates</title>
+    <meta name="description" content="DOT DEED turns domain names into elegant, printable certificates — perfect for gifting, collecting, or proudly displaying your digital estate.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="DOT DEED — Premium Domain Certificates">
+    <meta property="og:description" content="Turn a domain into an elegant, printable certificate — perfect for gifting, collecting, or proudly displaying your digital estate.">
+    <meta property="og:image" content="image.png">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --deep-maroon: #6B0B22;
+            --crimson: #D62828;
+            --cream: #FAF6F0;
+            --ink: #2a2230;
+            --muted: #6b6b7a;
+            --card: #ffffff;
+            --border: #ece5db;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            background: var(--cream);
+            color: var(--ink);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: var(--crimson); }
+
+        /* Header */
+        .site-header { background: linear-gradient(135deg, #2a0d16, #6B0B22); padding: 1rem 1.25rem; position: sticky; top: 0; z-index: 50; }
+        .site-header .inner { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+        .brand { display: flex; align-items: center; gap: 0.6rem; color: #fff; text-decoration: none; }
+        .brand img { height: 38px; width: auto; border-radius: 8px; }
+        .brand .name { font-family: 'Playfair Display', Georgia, serif; font-size: 1.2rem; font-weight: 700; letter-spacing: 0.5px; }
+        .brand .tagline { display: block; font-size: 0.6rem; letter-spacing: 2px; text-transform: uppercase; opacity: .75; font-family: Georgia, serif; }
+        .nav-links { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+        .nav-links a { color: rgba(255,255,255,.85); text-decoration: none; font-size: .9rem; }
+        .nav-links a:hover { color: #fff; text-decoration: underline; }
+        .header-cta { color: #fff; border: 1px solid rgba(255,255,255,.5); padding: .5rem 1rem; border-radius: 999px; font-size: .85rem; font-weight: 700; text-decoration: none; font-family: Georgia, serif; }
+        .header-cta:hover { background: rgba(255,255,255,.12); }
+
+        .wrap { max-width: 760px; margin: 0 auto; padding: 2.6rem 1.25rem 1rem; }
+        .wide { max-width: 1080px; margin: 0 auto; padding: 3rem 1.25rem; }
+        .eyebrow { color: var(--crimson); text-transform: uppercase; letter-spacing: 2.5px; font-size: .72rem; font-weight: 700; }
+        h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.9rem, 5vw, 3rem); line-height: 1.12; margin: .5rem 0 1rem; color: #2a0d16; }
+        h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.7rem; margin: 0 0 .6rem; color: #2a0d16; }
+        h3 { font-family: Georgia, serif; font-size: 1.1rem; margin: 0 0 .4rem; color: #2a0d16; }
+        p { margin: 0 0 1rem; }
+        .lead { font-size: 1.12rem; color: #4a4452; }
+        .center { text-align: center; }
+        .muted { color: var(--muted); }
+        .section-title { text-align: center; margin-bottom: 2rem; }
+
+        /* Hero */
+        .hero { padding: 4rem 1.25rem 2rem; text-align: center; }
+        .hero .btn { margin-top: .5rem; }
+
+        .btn { display: inline-block; background: linear-gradient(135deg, #D62828, #8a1a30); color: #fff; padding: .85rem 1.6rem; border-radius: 999px; font-weight: 700; font-size: 1rem; text-decoration: none; border: none; cursor: pointer; font-family: Georgia, serif; }
+        .btn:hover { transform: translateY(-1px); }
+        .btn-outline { background: transparent; border: 1px solid var(--deep-maroon); color: var(--deep-maroon); }
+        .btn-outline:hover { background: rgba(107,11,34,.06); }
+
+        /* Cards */
+        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; }
+        .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.2rem; }
+        .card h3 { margin-top: 0; }
+        .card p { font-size: .92rem; margin: 0; }
+
+        /* Pricing */
+        .pricing { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+        .price-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.4rem; text-align: center; }
+        .price-card .price { font-family: 'Playfair Display', Georgia, serif; font-size: 2rem; color: var(--deep-maroon); }
+        .price-card ul { list-style: none; padding: 0; margin: 1rem 0; font-size: .9rem; }
+        .price-card li { padding: .25rem 0; }
+        .price-card.featured { border: 2px solid var(--crimson); }
+
+        /* Demo + Shopper layout */
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+        @media (max-width: 860px) { .two-col { grid-template-columns: 1fr; } }
+
+        .demo-inputs label { display: block; font-size: .8rem; font-weight: 700; color: var(--muted); margin: .8rem 0 .25rem; text-transform: uppercase; letter-spacing: 1px; }
+        .demo-inputs input, .demo-inputs select { width: 100%; padding: .6rem .8rem; border: 1px solid var(--border); border-radius: 8px; background: var(--card); font-family: Georgia, serif; font-size: 1rem; }
+        .demo-inputs .btn { width: 100%; margin-top: 1.2rem; }
+
+        /* Certificate preview */
+        .cert-preview { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; text-align: center; font-family: 'Cormorant Garamond', Georgia, serif; }
+        .cert-preview .cert-inner { border: 3px double #6B0B22; padding: 1.25rem; }
+        .cert-preview .cert-brand { font-family: 'Great Vibes', cursive; font-size: 2.2rem; color: #6B0B22; }
+        .cert-preview .cert-tagline { font-size: .6rem; letter-spacing: 3px; text-transform: uppercase; color: #8a8a9a; margin-bottom: 1rem; }
+        .cert-preview .cert-title { font-size: .85rem; color: #6B0B22; letter-spacing: 1px; }
+        .cert-preview .cert-name { font-family: 'Great Vibes', cursive; font-size: 2.4rem; color: #2a0d16; margin: .3rem 0; }
+        .cert-preview .cert-domain { font-size: 1.2rem; font-weight: 700; color: #6B0B22; }
+        .cert-preview .cert-date { font-size: .7rem; color: #8a8a9a; margin-top: 1rem; }
+
+        /* Domain shopper */
+        .shopper-search { display: flex; gap: .5rem; flex-wrap: wrap; max-width: 640px; margin: 0 auto 1.2rem; }
+        .shopper-search input { flex: 1; min-width: 220px; padding: .7rem .9rem; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; font-family: Georgia, serif; }
+        .shopper-search button { padding: .7rem 1.4rem; border: none; border-radius: 8px; background: linear-gradient(135deg, #D62828, #8a1a30); color: #fff; font-weight: 700; cursor: pointer; font-family: Georgia, serif; }
+        .tld-chips { display: flex; gap: .5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem; }
+        .tld-chip { border: 1px solid var(--border); background: var(--card); border-radius: 999px; padding: .3rem .9rem; font-size: .85rem; cursor: pointer; font-family: Georgia, serif; }
+        .tld-chip.active { background: var(--deep-maroon); color: #fff; border-color: var(--deep-maroon); }
+        .shopper-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: .8rem; }
+        .domain-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: .9rem 1rem; }
+        .domain-card .d-name { font-weight: 700; font-size: 1rem; }
+        .domain-card .d-price { color: var(--muted); font-size: .85rem; }
+        .domain-card .d-badge { display: inline-block; font-size: .65rem; font-weight: 700; padding: .15rem .5rem; border-radius: 999px; margin-top: .35rem; }
+        .d-badge.available { background: #e6f4ea; color: #1e7a34; }
+        .d-badge.premium { background: #fdf1e0; color: #a86a00; }
+        .d-badge.taken { background: #f6e3e3; color: #b3261e; }
+        .shopper-note { text-align: center; font-size: .78rem; color: var(--muted); margin-top: 1rem; }
+
+        /* Footer */
+        .site-footer { margin-top: 3rem; padding: 2rem 1.25rem; background: #2a0d16; color: rgba(255,255,255,.7); font-size: .85rem; }
+        .site-footer .inner { max-width: 1080px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; align-items: center; }
+        .site-footer a { color: rgba(255,255,255,.85); text-decoration: none; margin-right: 1rem; }
+        .site-footer a:hover { text-decoration: underline; }
+        .badge-note { text-align: center; font-size: .72rem; color: var(--muted); padding: .5rem; }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="inner">
+            <a class="brand" href="#top">
+                <img src="favicon.png" alt="DOT DEED logo">
+                <span class="name">DOT DEED<span class="tagline">Registry of Digital Estates</span></span>
+            </a>
+            <nav class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#demo">Demo</a>
+                <a href="#shopper">Domains</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <a class="header-cta" href="#demo">Try the demo →</a>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="top" class="hero">
+        <div class="wide">
+            <p class="eyebrow">DOT DEED · Registry of Digital Estates</p>
+            <h1>Your domain.<br>Celebrated as <span style="color:var(--crimson);">a masterpiece.</span></h1>
+            <p class="lead">Turn a domain name into an elegant, printable certificate — perfect for gifting, collecting, or proudly displaying your digital estate. Fine-art print, framed or rolled, delivered to your door.</p>
+            <a class="btn" href="#demo">Design a certificate →</a>
+            <a class="btn btn-outline" href="#shopper" style="margin-left:.5rem;">Browse domains</a>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features">
+        <div class="wide">
+            <div class="section-title">
+                <p class="eyebrow">Why DOT DEED</p>
+                <h2>A keepsake your domain deserves</h2>
+            </div>
+            <div class="cards">
+                <div class="card"><h3>🎁 Gift it</h3><p>Surprise someone with their own corner of the internet — for a new business, a baby, a wedding, or a milestone.</p></div>
+                <div class="card"><h3>🖼️ Display it</h3><p>Framed or rolled fine-art prints, printed by our partner and shipped to your door.</p></div>
+                <div class="card"><h3>📜 Collect it</h3><p>Celebrate the names that matter — your brand, your name, your passion — as one-of-a-kind keepsakes.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing">
+        <div class="wide">
+            <div class="section-title">
+                <p class="eyebrow">Pricing</p>
+                <h2>Choose your tier</h2>
+            </div>
+            <div class="pricing">
+                <div class="price-card">
+                    <h3>Essential</h3>
+                    <div class="price">$15</div>
+                    <ul><li>Classic elegant design</li><li>Fine-art print or scroll</li><li>QR code included</li></ul>
+                </div>
+                <div class="price-card featured">
+                    <h3>Premium</h3>
+                    <div class="price">$30</div>
+                    <ul><li>Everything in Essential</li><li>Frame upgrade included</li><li>Ready to display</li></ul>
+                </div>
+                <div class="price-card">
+                    <h3>Elite</h3>
+                    <div class="price">$50</div>
+                    <ul><li>Full customization</li><li>Frame + gold-foil styling</li><li>The ultimate keepsake</li></ul>
+                </div>
+            </div>
+            <p class="badge-note">Printing & shipping quoted live at checkout on the full site.</p>
+        </div>
+    </section>
+
+    <!-- CERTIFICATE DEMO -->
+    <section id="demo">
+        <div class="wide">
+            <div class="section-title">
+                <p class="eyebrow">Live demo</p>
+                <h2>Design your certificate</h2>
+            </div>
+            <div class="two-col">
+                <div class="demo-inputs">
+                    <label for="cHolder">Certificate holder</label>
+                    <input id="cHolder" type="text" value="Alex Morgan" oninput="updateCert()">
+                    <label for="cDomain">Domain name</label>
+                    <input id="cDomain" type="text" value="alexmorgan.com" oninput="updateCert()">
+                    <label for="cDate">Issue date</label>
+                    <input id="cDate" type="date" oninput="updateCert()">
+                    <label for="cTheme">Theme</label>
+                    <select id="cTheme" onchange="updateCert()">
+                        <option value="classic">Classic</option>
+                        <option value="birthday">Birthday</option>
+                    </select>
+                    <button class="btn" onclick="downloadCert()">⬇️ Download as PNG</button>
+                </div>
+                <div class="cert-preview">
+                    <div id="certInner" class="cert-inner">
+                        <div class="cert-brand">DOT DEED</div>
+                        <div class="cert-tagline">Registry of Digital Estates</div>
+                        <div class="cert-title">By the authority vested in the Registry, it is hereby certified that</div>
+                        <div class="cert-name">Alex Morgan</div>
+                        <div style="font-size:.75rem;color:#8a8a9a;">having demonstrated rightful stewardship, is granted the title of</div>
+                        <div class="cert-domain">alexmorgan.com</div>
+                        <div class="cert-date" id="certDate"></div>
+                    </div>
+                </div>
+            </div>
+            <p class="badge-note">This is a client-side demo. To order a printed certificate, visit the full DOT DEED site.</p>
+        </div>
+    </section>
+
+    <!-- DOMAIN SHOPPER (replicated, demo data) -->
+    <section id="shopper">
+        <div class="wide">
+            <div class="section-title">
+                <p class="eyebrow">Domain Shopper</p>
+                <h2>Find a domain to celebrate</h2>
+            </div>
+            <div class="shopper-search">
+                <input id="shopperQuery" type="text" placeholder="Search domains… e.g. yourname" onkeydown="if(event.key==='Enter')shopperSearch()">
+                <button onclick="shopperSearch()">Search</button>
+            </div>
+            <div class="tld-chips" id="tldChips"></div>
+            <div class="shopper-grid" id="shopperGrid"></div>
+            <p class="shopper-note">Demo data shown for illustration — availability & pricing are examples, not live.</p>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="wide center">
+            <div class="section-title">
+                <p class="eyebrow">Contact</p>
+                <h2>Questions about your certificate?</h2>
+            </div>
+            <p class="muted">We'd love to hear from you.</p>
+            <a class="btn" href="mailto:Fraser@FraserGarner.com">Email us →</a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="inner">
+            <span>© 2026 DOT DEED. All rights reserved.</span>
+            <span>
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#demo">Demo</a>
+                <a href="#shopper">Domains</a>
+                <a href="mailto:Fraser@FraserGarner.com">Contact</a>
+            </span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script>
+        // ===== Certificate demo =====
+        function fmtDate(iso) {
+            if (!iso) return 'Issued ' + new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+            const d = new Date(iso + 'T00:00:00');
+            return 'Issued ' + d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+        }
+        function updateCert() {
+            const holder = document.getElementById('cHolder').value || '[Your Name]';
+            const domain = document.getElementById('cDomain').value || '[domain.com]';
+            const date = fmtDate(document.getElementById('cDate').value);
+            const theme = document.getElementById('cTheme').value;
+            const inner = document.getElementById('certInner');
+            inner.querySelector('.cert-name').textContent = holder;
+            inner.querySelector('.cert-domain').textContent = domain;
+            document.getElementById('certDate').textContent = date;
+            inner.style.borderColor = theme === 'birthday' ? '#D62828' : '#6B0B22';
+        }
+        async function downloadCert() {
+            const el = document.getElementById('certInner');
+            try {
+                const canvas = await html2canvas(el, { backgroundColor: '#ffffff', scale: 2 });
+                const a = document.createElement('a');
+                a.download = 'dotdeed-certificate.png';
+                a.href = canvas.toDataURL('image/png');
+                a.click();
+            } catch (e) {
+                alert('Could not generate the image in this browser.');
+            }
+        }
+        updateCert();
+
+        // ===== Domain shopper (replicated with demo data) =====
+        const DEMO_DOMAINS = [
+            { name: 'alexmorgan', tld: '.com', price: 12, premium: false },
+            { name: 'brightstories', tld: '.com', price: 15, premium: false },
+            { name: 'northpeak', tld: '.io', price: 45, premium: true },
+            { name: 'evergreen', tld: '.co', price: 18, premium: false },
+            { name: 'lumenlab', tld: '.io', price: 52, premium: true },
+            { name: 'graceworks', tld: '.com', price: 14, premium: false },
+            { name: 'haloflow', tld: '.app', price: 29, premium: false },
+            { name: 'kinfolk', tld: '.net', price: 11, premium: false },
+            { name: 'metaline', tld: '.com', price: 22, premium: false },
+            { name: 'oakbranch', tld: '.org', price: 9, premium: false },
+            { name: 'pixelpines', tld: '.dev', price: 24, premium: false },
+            { name: 'quillforge', tld: '.ai', price: 88, premium: true },
+            { name: 'redcoral', tld: '.co', price: 19, premium: false },
+            { name: 'sunnyside', tld: '.com', price: 16, premium: false },
+            { name: 'tideworks', tld: '.net', price: 12, premium: false },
+            { name: 'violetvale', tld: '.xyz', price: 5, premium: false },
+            { name: 'wanderwell', tld: '.com', price: 20, premium: false },
+            { name: 'zenithlab', tld: '.io', price: 40, premium: true },
+            { name: 'brandcraft', tld: '.com', price: 17, premium: false },
+            { name: 'crownpoint', tld: '.org', price: 10, premium: false },
+        ];
+        const TLDS = ['.com', '.io', '.co', '.net', '.org', '.app', '.dev', '.ai', '.xyz'];
+        let activeTld = '.com';
+        let query = '';
+
+        function buildChips() {
+            const chips = document.getElementById('tldChips');
+            chips.innerHTML = TLDS.map(t => `<button class="tld-chip ${t === activeTld ? 'active' : ''}" onclick="setTld('${t}')">${t}</button>`).join('');
+        }
+        function setTld(t) { activeTld = t; buildChips(); shopperSearch(); }
+
+        // Deterministic pseudo-availability so typed queries feel real but stay client-side
+        function hashStr(s) { let h = 0; for (let i = 0; i < s.length; i++) { h = (h * 31 + s.charCodeAt(i)) >>> 0; } return h; }
+
+        function shopperSearch() {
+            query = document.getElementById('shopperQuery').value.trim().toLowerCase();
+            const grid = document.getElementById('shopperGrid');
+            let items = DEMO_DOMAINS.filter(d => d.tld === activeTld);
+            if (query) {
+                const h = hashStr(query + activeTld);
+                const available = h % 3 !== 0;
+                const premium = h % 5 === 0;
+                const price = premium ? 35 + (h % 60) : 9 + (h % 22);
+                items = [{ name: query.replace(/[^a-z0-9-]/g, ''), tld: activeTld, price, premium, available }].concat(items.slice(0, 5));
+            } else {
+                items = items.map((d, i) => ({ ...d, available: hashStr(d.name + d.tld) % 3 !== 0 }));
+            }
+            grid.innerHTML = items.map(d => {
+                const badge = d.available === false ? '<span class="d-badge taken">Taken</span>'
+                    : d.premium ? '<span class="d-badge premium">Premium</span>'
+                    : '<span class="d-badge available">Available</span>';
+                return `<div class="domain-card"><div class="d-name">${escapeHtml(d.name + d.tld)}</div><div class="d-price">$${d.price}/yr</div>${badge}</div>`;
+            }).join('') || '<p class="muted center">No domains found.</p>';
+        }
+        function escapeHtml(s) { return s.replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c])); }
+
+        buildChips();
+        shopperSearch();
+    </script>
+</body>
+</html>
